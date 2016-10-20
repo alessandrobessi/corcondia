@@ -37,17 +37,22 @@ def corcondia(tensor, components = 1):
     y = kronecker([Ua.transpose(), Ub.transpose(), Uc.transpose()], x)
     z = kronecker([SaI, SbI, ScI], y)
     G = kronecker([Va.transpose(), Vb.transpose(), Vc.transpose()], z)
+    
     # print G
+    
     C = np.full((k, k, k), 0)
     for i in range(k):
         for j in range(k):
             for l in range(k):
                 if i == j == l:
                     C[i][j][l] = 1
+    
     c = 0
     for i in range(k):
         for j in range(k):
             for l in range(k):
                 c += float(G[i][j][l] - C[i][j][l]) ** 2.0
+    
     cc = 100 * (1 - (c / float(k)))
+    
     return round(cc)
