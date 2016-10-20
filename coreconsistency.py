@@ -17,7 +17,6 @@ def corcondia(tensor, components = 1):
 
     x = X_approx_ks.totensor()
 
-    # CORCONDIA
     Ua , Sa , Va = np.linalg.svd(A)
     Ub , Sb , Vb = np.linalg.svd(B)
     Uc , Sc , Vc = np.linalg.svd(C)
