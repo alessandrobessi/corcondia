@@ -1,3 +1,30 @@
+'''
+Alessandro Bessi
+Information Sciences Institute
+University of Southern California
+bessi@isi.edu
+
+Efficient algorithm for computing the core consistency diagnostic
+(CORCONDIA) for the PARAFAC tensor decomposition.
+
+References:
+Buis, Paul E., and Wayne R. Dyksen. 
+"Efficient vector and parallel manipulation of tensor products." 
+ACM Transactions on Mathematical Software (TOMS) 22.1 (1996): 18-23.
+
+Papalexakis, Evangelos E., and Christos Faloutsos. 
+"Fast efficient and scalable core consistency diagnostic 
+for the parafac decomposition for big sparse tensors." 
+2015 IEEE International Conference on Acoustics, 
+Speech and Signal Processing (ICASSP). IEEE, 2015.
+
+Bro, Rasmus, and Henk AL Kiers. 
+"A new efficient method for determining the number of components in PARAFAC models."
+Journal of chemometrics 17.5 (2003): 274-286.
+
+'''
+
+
 from sktensor import dtensor, cp_als
 import numpy as np
 
