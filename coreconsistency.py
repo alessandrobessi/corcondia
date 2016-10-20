@@ -1,3 +1,6 @@
+from sktensor import dtensor, cp_als
+import numpy as np
+
 def kronecker(matrices, tensor):
     K = len(matrices)
     x = tensor
